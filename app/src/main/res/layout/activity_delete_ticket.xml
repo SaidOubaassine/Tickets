@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foreground">
+
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_login"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp">
+
+        <TextView
+            android:id="@+id/tv_modification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="19dp"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:paddingTop="20dp"
+            android:text="Are you sure to delete this ticket ? "
+            android:textColor="#FFA07A"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/annuler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_modification"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Annuler" />
+
+        <Button
+            android:id="@+id/valider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_modification"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Valider" />
+    </RelativeLayout>
+</RelativeLayout>

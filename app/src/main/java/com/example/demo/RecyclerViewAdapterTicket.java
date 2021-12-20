@@ -1,6 +1,10 @@
 package com.example.demo;
 
+
+
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +18,6 @@ import java.util.ArrayList;
 public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerViewAdapterTicket.TicketViewHolder> {
 
     ArrayList<TicketItem> ticketItemsList;
-    ArrayList<String> day;
     Context context;
 
     public RecyclerViewAdapterTicket(ArrayList<TicketItem> ticketItemsList) {
@@ -33,15 +36,33 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ticket, parent, false);
         TicketViewHolder viewHolder = new TicketViewHolder(v);
         return viewHolder;
-
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TicketViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TicketViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.date1.setText(ticketItemsList.get(position).getDate1());
         holder.date2.setText(ticketItemsList.get(position).getdate2());
         holder.statut.setText(ticketItemsList.get(position).getStatus());
         holder.mealType.setText(ticketItemsList.get(position).getMealType());
+
+        // supression du ticket
+
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String date2,mealType;
+                date2 = ticketItemsList.get(position).getdate2();
+                mealType = ticketItemsList.get(position).getMealType();
+                Intent intent = new Intent(context, DeleteTicketActivity.class);
+                intent.putExtra("date2", date2);
+                intent.putExtra("mealType", mealType);
+
+                context.startActivity( intent);
+
+            }
+        });
+
     }
 
     @Override
@@ -50,7 +71,7 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
     }
 
     class TicketViewHolder extends RecyclerView.ViewHolder {
-        TextView date1, date2, statut, mealType;
+        TextView date1, date2, statut, mealType, delete;
 
         public TicketViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,9 +80,7 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
             date2 = itemView.findViewById(R.id.date2);
             statut = itemView.findViewById(R.id.statut);
             mealType = itemView.findViewById(R.id.meal);
+            delete = itemView.findViewById(R.id.delete);
         }
     }
 }
-
-
-

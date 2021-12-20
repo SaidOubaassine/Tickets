@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo">
         <activity
+            android:name=".DeleteTicketActivity"
+            android:exported="false" />
+        <activity
             android:name=".AboutUs"
             android:exported="false" />
         <activity
