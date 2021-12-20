@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@drawable/imag"
+    tools:context=".Profile">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/anima"/>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+     <include layout="@layout/main_toolbar"/>
+
+  <RelativeLayout
+
+      android:layout_width="350dp"
+      android:layout_height="500dp"
+      android:layout_marginTop="50dp"
+      android:layout_marginLeft="5dp"
+      android:background="@drawable/shape_login">
+      <TextView
+          android:id="@+id/tv_modification"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="10dp"
+          android:fontFamily="sans-serif-medium"
+          android:paddingTop="20dp"
+          android:text="Modification des informations Personnelles"
+          android:textColor="#FFA07A"/>
+      <TextView
+          android:id="@+id/tv_nom"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_modification"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="50dp"
+          android:text="Full Name"
+          android:textColor="#FFA07A"
+          />
+      <TextView
+          android:id="@+id/tv_nomUser"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_nom"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:text="Said Ou" />
+
+      <TextView
+          android:id="@+id/tv_modifier_1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_nom"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="30dp"
+          android:textStyle="italic|bold"
+          android:fontFamily="sans-serif-medium"
+          android:text="Modifier"
+          android:onClick="Clicktxt1"
+          />
+      <TextView
+          android:id="@+id/line2"
+          android:layout_width="280dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_nom"
+          android:layout_centerInParent="true"
+          android:background="@drawable/ligne"
+          android:layout_marginTop="20dp"/>
+
+      <TextView
+          android:id="@+id/tv_email"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/line2"
+          android:layout_marginLeft="30dp"
+          android:text="Adresse Email"
+          android:textColor="#FFA07A" />
+
+      <TextView
+          android:id="@+id/tv_emailUser"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_email"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:text="saidoubaassine@gmail.com" />
+
+      <TextView
+          android:id="@+id/tv_modifier_3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_emailUser"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="30dp"
+          android:textStyle="italic|bold"
+          android:fontFamily="sans-serif-medium"
+          android:onClick="Clicktxt2"
+          android:text="Modifier"
+           />
+
+      <TextView
+          android:id="@+id/line3"
+          android:layout_width="280dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_emailUser"
+          android:layout_centerInParent="true"
+          android:background="@drawable/ligne" />
+
+      <TextView
+          android:id="@+id/tv_password"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/line3"
+          android:layout_marginLeft="30dp"
+          android:text="Met de passe"
+          android:textColor="#FFA07A"/>
+
+      <TextView
+          android:id="@+id/tv_passwordUser"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_password"
+          android:layout_marginLeft="30dp"
+          android:layout_marginTop="10dp"
+          android:text="**************" />
+
+      <TextView
+          android:id="@+id/tv_modifier_4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/tv_password"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="30dp"
+          android:fontFamily="sans-serif-medium"
+          android:onClick="Clicktxt3"
+          android:textStyle="italic|bold"
+          android:text="Modifier"
+           />
+  </RelativeLayout>
+ </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+ </LinearLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white">
+   <include layout="@layout/main_nav_drawer"/>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

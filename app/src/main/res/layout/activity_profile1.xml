@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile1"
+    android:background="@drawable/foreground">
+
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_login"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="35dp">
+        <TextView
+            android:id="@+id/tv_modification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modification de nom"
+            android:textColor="#FFA07A"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="10dp"
+            />
+
+
+        <EditText
+            android:id="@+id/et_nom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_modification"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:width="250dp"
+            android:hint="Fisrt Name"
+
+            />
+
+        <EditText
+            android:id="@+id/et_prenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_nom"
+            android:layout_centerHorizontal="true"
+            android:hint="Last Name"
+            android:layout_marginRight="20dp"
+            android:width="250dp"
+            android:layout_marginTop="50dp"
+            />
+        <Button
+            android:id="@+id/btn_modifier_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modifier"
+            android:layout_below="@id/et_prenom"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            />
+        <Button
+            android:id="@+id/btn_annuler_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_prenom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Annuler"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/imag"
+    tools:context=".Welcome">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center_horizontal"
+       android:background="@drawable/anima">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Welcome"
+       android:textColor="#FFA07A"
+       android:textSize="50dp"
+       android:textStyle="bold"
+       android:layout_marginTop="200dp"
+       />
+   <TextView
+       android:layout_width="260dp"
+       android:layout_height="wrap_content"
+       android:text="To My Ticket"
+       android:textColor="#FFD700"
+       android:textStyle="bold|italic"
+       android:textSize="40dp"
+       android:fontFamily="@font/arizonia"
+       android:gravity="center"
+       android:layout_marginTop="20dp"/>
+   <Button
+       android:id="@+id/log"
+       android:background="@drawable/button"
+       android:layout_width="300dp"
+       android:layout_height="50dp"
+      android:text="Login"
+      android:textSize="18dp"
+      android:textStyle="bold"
+      android:textColor="#fff"
+      android:layout_marginTop="100dp"
+       android:onClick="tap1"/>
+   <Button
+       android:id="@+id/reg"
+       android:background="@drawable/button"
+       android:layout_width="300dp"
+       android:layout_height="50dp"
+       android:text="Register"
+       android:textSize="18dp"
+       android:textStyle="bold"
+       android:textColor="#fff"
+       android:layout_marginTop="20dp"
+       android:onClick="tap3"/>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/imag"
+    tools:context=".Login">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/anima"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:text="Login"
+            android:textColor="#FFA07A"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/cercle"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/emailId"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:hint="Email"
+            android:textColorHint="#FFA07A"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/forget"
+            />
+        <EditText
+            android:id="@+id/passwordId"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:hint="Password"
+            android:textColorHint="#FFA07A"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/forget"/>
+        <Button
+            android:id="@+id/buttonLogin"
+            android:background="@drawable/button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Login"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/registerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?Sing Up"
+            android:textColor="#FFD700"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:onClick="register"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anim5"
+    tools:context=".AnimatePage">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+
+          android:background="@drawable/anima">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/textView"
+                android:text="My Ticket"
+                android:textColor="#FFA07A"
+                android:textSize="70sp"
+                android:fontFamily="@font/arizonia"
+                android:layout_marginTop="300dp"
+                android:layout_marginLeft="30dp"
+                android:shadowColor="#FFD700"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+      </RelativeLayout>
+</RelativeLayout>
