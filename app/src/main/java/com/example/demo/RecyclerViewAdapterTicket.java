@@ -19,6 +19,15 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
 
     ArrayList<TicketItem> ticketItemsList;
     Context context;
+   private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onDeleteClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
 
     public RecyclerViewAdapterTicket(ArrayList<TicketItem> ticketItemsList) {
         this.ticketItemsList = ticketItemsList;
@@ -34,7 +43,7 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
     public TicketViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_ticket, parent, false);
-        TicketViewHolder viewHolder = new TicketViewHolder(v);
+        TicketViewHolder viewHolder = new TicketViewHolder(v, mListener);
         return viewHolder;
     }
 
@@ -47,7 +56,7 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
 
         // supression du ticket
 
-        holder.delete.setOnClickListener(new View.OnClickListener() {
+       /*holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -57,11 +66,10 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
                 Intent intent = new Intent(context, DeleteTicketActivity.class);
                 intent.putExtra("date2", date2);
                 intent.putExtra("mealType", mealType);
-
-                context.startActivity( intent);
-
+                intent.putExtra("position", position);
+                context.startActivity(intent);
             }
-        });
+        });*/
 
     }
 
@@ -73,7 +81,7 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
     class TicketViewHolder extends RecyclerView.ViewHolder {
         TextView date1, date2, statut, mealType, delete;
 
-        public TicketViewHolder(@NonNull View itemView) {
+        public TicketViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
 
             date1 = itemView.findViewById(R.id.date1);
@@ -81,6 +89,32 @@ public class RecyclerViewAdapterTicket extends RecyclerView.Adapter< RecyclerVie
             statut = itemView.findViewById(R.id.statut);
             mealType = itemView.findViewById(R.id.meal);
             delete = itemView.findViewById(R.id.delete);
+
+            // suppression du ticket
+           delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+
+                            String date2,mealType;
+                            date2 = ticketItemsList.get(position).getdate2();
+                            mealType = ticketItemsList.get(position).getMealType();
+                            Intent intent = new Intent(context, DeleteTicketActivity.class);
+                            intent.putExtra("date2", date2);
+                            intent.putExtra("mealType", mealType);
+                            intent.putExtra("position", position);
+                            context.startActivity(intent);
+
+                            listener.onDeleteClick(position);
+                        }
+                    }
+                }
+            });
+        }
+
+
         }
     }
-}
+

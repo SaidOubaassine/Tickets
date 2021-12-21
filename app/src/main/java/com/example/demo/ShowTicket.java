@@ -32,6 +32,7 @@ public class ShowTicket extends AppCompatActivity {
     private FirebaseUser user;
     private String userId;
     RelativeLayout relativeLayout;
+    private int itemPosition;
 
 
     @Override
@@ -58,8 +59,12 @@ public class ShowTicket extends AppCompatActivity {
         EventChangeListener();
         rv.setAdapter(adapter);
 
-
-
+        adapter.setOnItemClickListener(new RecyclerViewAdapterTicket.OnItemClickListener() {
+            @Override
+            public void onDeleteClick(int position) {
+                itemPosition = position;
+            }
+        });
     }
 
     private void EventChangeListener(){
@@ -82,7 +87,8 @@ public class ShowTicket extends AppCompatActivity {
                             if((dc.getType() == DocumentChange.Type.ADDED)){
 
                                 ticketItems.add(dc.getDocument().toObject(TicketItem.class));
-                            }if((dc.getType() == DocumentChange.Type.REMOVED));
+                            }if((dc.getType() == DocumentChange.Type.REMOVED))
+                                ticketItems.remove(itemPosition);
 
                             adapter.notifyDataSetChanged();
                         }
@@ -90,4 +96,5 @@ public class ShowTicket extends AppCompatActivity {
                 });
 
     }
+
 }

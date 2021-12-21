@@ -29,6 +29,7 @@ public class DeleteTicketActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_ticket);
+        
 
         valider = findViewById(R.id.valider);
         annuler = findViewById(R.id.annuler);
@@ -60,6 +61,7 @@ public class DeleteTicketActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(@NonNull Void unused) {
                                     Toast.makeText(DeleteTicketActivity.this,"Ticket sucessfully deleted",Toast.LENGTH_SHORT).show();
+
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
