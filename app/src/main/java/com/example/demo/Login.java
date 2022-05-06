@@ -50,9 +50,11 @@ public class Login extends AppCompatActivity {
                 String txt_email=email.getText().toString().trim();
                 String txt_password=password.getText().toString().trim();
                 if (TextUtils.isEmpty(txt_email) || TextUtils.isEmpty(txt_password)){
+                    email.setError("Email is required");
                     Toast.makeText(Login.this,"Empty credentials",Toast.LENGTH_SHORT).show();
                 }else if (txt_password.length()<6){
-                    Toast.makeText(Login.this,"Password too short!",Toast.LENGTH_SHORT).show();
+                    password.setError("password must be >6 characters");
+                    //Toast.makeText(Login.this,"Password too short!",Toast.LENGTH_SHORT).show();
                 }else{
                     progressDialog.setMessage("Please Wait Login ...");
                     progressDialog.setTitle("Login");

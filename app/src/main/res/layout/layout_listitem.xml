@@ -18,7 +18,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:background="@drawable/anima">
 
 
             <Button
@@ -38,7 +38,7 @@
                 android:shadowColor="#FFD700"
                 android:shadowDx="1"
                 android:shadowDy="1"
-                android:textColor="#FF4500" />
+                android:textColor="#FFD700" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

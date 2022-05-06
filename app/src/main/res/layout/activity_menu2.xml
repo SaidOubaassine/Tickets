@@ -24,29 +24,29 @@
         android:shadowDy="4"
         android:shadowRadius="4"
         />
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/jour"
-        app:layout_constraintStart_toStartOf="parent"/>
 
     <LinearLayout
         android:id="@+id/lunch"
         android:layout_width="400dp"
-        android:layout_height="300dp"
-        android:layout_below="@+id/date"
+        android:layout_height="330dp"
+        android:layout_below="@+id/jour"
         android:background="@drawable/shadow_login"
         android:orientation="vertical"
         android:layout_centerInParent="true">
-
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="#FFD700"/>
       <TextView
           android:id="@+id/lunchMeal"
           android:layout_width="match_parent"
           android:layout_height="30dp"
           android:text="Lunch"
           android:gravity="center"
-          android:layout_marginTop="20dp"
+          android:layout_marginTop="10dp"
           android:textColor="#FF7F50"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 android:id="@+id/dinner_plat_entree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="90dp"/>
+                android:paddingLeft="50dp"/>
         </LinearLayout>
 
 
@@ -84,7 +84,7 @@
                 android:id="@+id/dinner_plat_principale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="90dp"/>
+                android:paddingLeft="50dp"/>
         </LinearLayout>
 
 
@@ -104,7 +104,7 @@
                 android:id="@+id/dinner_dissert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="90dp"/>
+                android:paddingLeft="50dp"/>
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -126,7 +126,7 @@
         android:layout_below="@+id/jour"
         android:background="@drawable/shadow_login"
         android:orientation="vertical"
-        android:layout_marginTop="260dp">
+        android:layout_marginTop="290dp">
 
         <TextView
             android:id="@+id/dinnerMeal"
@@ -151,7 +151,7 @@
                 android:id="@+id/lunch_plat_entree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="90dp"/>
+                android:paddingLeft="50dp"/>
         </LinearLayout>
 
 
@@ -172,7 +172,7 @@
                 android:id="@+id/lunch_plat_principale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="90dp"/>
+                android:paddingLeft="50dp"/>
         </LinearLayout>
 
 
@@ -192,7 +192,7 @@
                 android:id="@+id/lunch_dissert"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="90dp"/>
+                android:paddingLeft="50dp"/>
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
